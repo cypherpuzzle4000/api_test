@@ -40,6 +40,16 @@ async function getPosts() {
   return response.data;
 }
 
+async function getUsers() {
+  const response = await api.get('/users');
+  return response.data;
+}
+
+async function getUser(id) {
+  const response = await api.get(`/users/${id}`);
+  return response.data;
+}
+
 async function createPost(data) {
   const response = await api.post('/posts', data);
   return response.data;
@@ -64,4 +74,6 @@ module.exports = {
   updatePost,
   deletePost,
   setAuthToken,
+  getUsers,
+  getUser,
 };

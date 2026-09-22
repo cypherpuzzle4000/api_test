@@ -109,6 +109,24 @@ POST /api/auth/logout
 Authorization: Bearer <token>
 ```
 
+### User routes
+
+All user routes require a JWT in the Authorization header.
+
+#### Get all users
+
+```http
+GET /api/users
+Authorization: Bearer <token>
+```
+
+#### Get a specific user
+
+```http
+GET /api/users/:id
+Authorization: Bearer <token>
+```
+
 ### Protected posts routes
 
 ```http
